@@ -18,7 +18,7 @@ public class FamousQuotes {
         try {
         System.out.print("Choose a quote from 1 to 10 : ");
         int choice = scanner.nextInt();
-// User inputs from 1-10 but in reality we need to change our choices from 0-9
+
 
         if (choice < 1 || choice > 10) {
             System.out.println("Invalid input, choose between 1 and 10!");
