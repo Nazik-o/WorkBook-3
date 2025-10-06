@@ -15,11 +15,23 @@ public class FamousQuotes {
                 "Programs must be written for people to read. — Harold Abelson"
         };
         Scanner scanner = new Scanner(System.in);
+        try {
         System.out.print("Choose a quote from 1 to 10 : ");
         int choice = scanner.nextInt();
 // User inputs from 1-10 but in reality we need to change our choices from 0-9
-        int index = choice - 1;
-        System.out.print(quotes[index]);
+
+        if (choice < 1 || choice > 10) {
+            System.out.println("Invalid input, choose between 1 and 10!");
+        } else {
+            // User inputs from 1-10 but in reality we need to change our choices from 0-9
+            int index = choice - 1;
+            System.out.println(quotes[index]);
+        }
+        }
+        catch (Exception exception) {
+        System.out.println("Error: please enter a valid number!!");
+    }
+
 
         scanner.close();
     }
